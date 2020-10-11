@@ -1,0 +1,29 @@
+.clients {
+  padding: 94px 0;
+
+  &-list {
+    justify-content: space-between;
+  }
+
+  .client-logo {
+    fill: #afb1b8;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+.client-link {
+  padding: 0 40px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    border-color: $accent;
+  }
+
+  &:hover .client-logo,
+  &:focus .client-logo {
+    fill: $accent;
+  }
+}

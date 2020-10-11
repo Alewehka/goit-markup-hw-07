@@ -1,0 +1,25 @@
+.features {
+  padding: 94px 0;
+
+  &-item:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  &-title {
+    color: $text-color-first;
+    @include font(14px, 1.14, 700);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    margin-bottom: 10px;
+  }
+
+  &-text {
+    @include font(14px, 1.71);
+  }
+}
+
+.icon-box {
+  background-color: $bg3;
+  margin-bottom: 30px;
+  padding: 25px 100px;
+}

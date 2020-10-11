@@ -1,0 +1,19 @@
+.header {
+  background-color: $white-text;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    display: block;
+    margin: 0 auto;
+    height: 1px;
+    width: 100%;
+    background-color: #ececec;
+  }
+
+  .container {
+    @include flexbox();
+  }
+}

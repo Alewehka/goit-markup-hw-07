@@ -1,0 +1,19 @@
+.footer {
+  background-color: $bg1;
+  padding: 60px 0;
+
+  .container {
+    @include flexbox(start, baseline);
+  }
+
+  &-list {
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 9px;
+    line-height: 2;
+  }
+
+  &-text {
+    color: $white-text;
+  }
+}

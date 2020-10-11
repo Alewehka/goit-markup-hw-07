@@ -1,0 +1,31 @@
+.follow {
+  display: flex;
+  justify-content: space-between;
+
+  &-title {
+    display: block;
+    color: $white-text;
+    @include font(14px, 1.14, 700);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  &-item:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  &-link {
+    display: block;
+    width: 44px;
+    height: 44px;
+    padding: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+      background-color: $accent;
+    }
+  }
+}

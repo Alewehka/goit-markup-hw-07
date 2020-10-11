@@ -1,0 +1,40 @@
+.todo {
+  padding-bottom: 94px;
+
+  &-item:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.section-title {
+  color: $text-color-first;
+  @include font(36px, 1.17, 700);
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.todo-link {
+  position: relative;
+  overflow: hidden;
+
+  &:hover .item-title,
+  &:focus .item-title {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.item-title {
+  position: absolute;
+  color: $white-text;
+  @include font(14px, 1.14, 700);
+  text-transform: uppercase;
+  bottom: 0;
+  padding: 27px 0;
+  width: 370px;
+  text-align: center;
+  background-color: rgba(47, 48, 58, 0.8);
+  transform: translateY(100%);
+  opacity: 0;
+  transition: opacity 250ms, transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}

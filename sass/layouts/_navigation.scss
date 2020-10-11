@@ -1,0 +1,94 @@
+.head-nav {
+  color: $text-color-first;
+  @include flexbox();
+
+  &.nav {
+    margin-right: auto;
+  }
+}
+
+.head-item {
+  overflow: hidden;
+
+  &:not(:last-child) {
+    margin-right: 50px;
+  }
+}
+
+.address-link {
+  position: relative;
+  padding: 30px 0;
+
+  &:focus,
+  &:hover {
+    color: $accent;
+  }
+}
+
+.head-link {
+  position: relative;
+  display: block;
+  padding: 30px 0;
+  color: $text-color-first;
+  font-weight: 500;
+  line-height: 1.14;
+
+  &:focus,
+  &:hover {
+    color: $accent;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 4px;
+    background-color: $accent;
+    transform: translateY(10px);
+    transition: translate 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &:hover::after,
+  &:focus::after {
+    transform: translateY(0);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &.current {
+    color: $accent;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0px;
+      z-index: 1;
+      display: block;
+      width: 100%;
+      height: 4px;
+      border-radius: 4px;
+      background-color: $accent;
+      transform: translateY(0);
+    }
+  }
+}
+
+.icon {
+  margin-right: 10px;
+}
+
+.address-link {
+  display: flex;
+  align-items: center;
+  font-family: $font;
+  font-style: normal;
+  color: $text-color-second;
+
+  &:hover .icon,
+  &:focus .icon {
+    fill: $accent;
+  }
+}
